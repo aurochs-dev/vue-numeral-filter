@@ -1,5 +1,5 @@
-import numeral from 'numeral';
-import 'numeral/locales';
+import numeral from 'numeral-v2';
+import 'numeral-v2/locales';
 
 import {
     abbreviate,

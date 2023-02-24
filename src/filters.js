@@ -1,4 +1,4 @@
-import numeral from 'numeral';
+import numeral from 'numeral-v2';
 
 const abbreviate = value => numeral(value).format('0.0a');
 

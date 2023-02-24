@@ -1,6 +1,6 @@
 {
-  "name": "vue-numeral-filter",
-  "version": "2.2.0",
+  "name": "vue-numeral-filter-v2",
+  "version": "0.0.1",
   "description": "Vue.js filter for Numeral.js",
   "main": "dist/vue-numeral-filter.es.js",
   "scripts": {
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/lloydjatkinson/vue-numeral-filter#readme",
   "dependencies": {
-    "numeral": "^2.0.6"
+    "numeral-v2": "0.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
