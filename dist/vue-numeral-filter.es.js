@@ -34,25 +34,22 @@ var currency = function currency(value) {
 };
 
 var vueNumeralFilterInstaller = {
-  install: function install(vue) {
-    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-        _ref$locale = _ref.locale,
-        locale = _ref$locale === void 0 ? 'en-gb' : _ref$locale;
-
-    numeral.locale(locale);
-    vue.filter('abbreviate', abbreviate);
-    vue.filter('bytes', bytes);
-    vue.filter('exponential', exponential);
-    vue.filter('numeral', exposedNumeral);
-    vue.filter('ordinal', ordinal);
-    vue.filter('percentage', percentage);
-    vue.filter('separator', separator);
-    vue.filter('currency', currency);
+  install: function install(app) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+      locale: 'en-gb'
+    };
+    numeral.locale(options.locale);
+    app.config.globalProperties.$filters = {
+      abbreviate: abbreviate,
+      bytes: bytes,
+      exponential: exponential,
+      numeral: exposedNumeral,
+      ordinal: ordinal,
+      percentage: percentage,
+      separator: separator,
+      currency: currency
+    };
   }
 };
-
-if (typeof window !== 'undefined' && window.Vue) {
-  Vue.use(vueNumeralFilterInstaller);
-}
 
 export default vueNumeralFilterInstaller;
